@@ -13628,9 +13628,6 @@ var TwilioConnectionManager = function (_Component) {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
       this.disconnectCall();
-      this.localTrackRoom.localParticipant.tracks.forEach(function (track) {
-        return track.stop();
-      });
     }
   }, {
     key: 'connectToTwilio',

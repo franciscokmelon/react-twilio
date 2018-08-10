@@ -24,7 +24,6 @@ class TwilioConnectionManager extends Component {
 
   componentWillUnmount() {
     this.disconnectCall();
-    this.localTrackRoom.localParticipant.tracks.forEach(track => track.stop());
   }
 
   async connectToTwilio(token, roomName, initialCamera) {
