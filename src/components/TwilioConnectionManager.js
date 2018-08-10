@@ -114,7 +114,7 @@ class TwilioConnectionManager extends Component {
     if (this.localTrackRoom != null) {
       this.token = null;
       this.setState({ tracks: { remote: {}, local: [] }, disconnected: true });
-      this.localTrackRoom.disconnect();
+      this.localTrackRoom.localParticipant.tracks.forEach(track => track.stop());
     }
   }
 
